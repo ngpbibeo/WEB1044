@@ -9,18 +9,18 @@ if (chanLe % 2 == 0)    {
 
 // Bài 2.1
 
-const tinhDien = Number(prompt("Nhập số điện tiêu thụ: "));
-tinhDien >=0 && tinhDien <= 50 
+const tinhDien = +prompt("Nhập số điện tiêu thụ: ");
+tinhDien >=0 && tinhDien <= 50
 ? console.log("Số tiền điện phải trả là: " + tinhDien * 1.800 + " VNĐ")
 : tinhDien >=51 && tinhDien <=100
 ? console.log("Số tiền điện phải trả là: " + tinhDien * 2.300 + " VNĐ")
-: tinhDien >=101 
+: tinhDien >=101
 ? console.log("Số tiền điện phải trả là: " + tinhDien * 3.000 + " VNĐ")
-: console.log("Số liệu nhập vào không hợp lệ.");  
+: console.log("Số liệu nhập vào không hợp lệ.");
 
 // Bài 2.2
 
-const tienDien = Number(prompt("Nhập số tiền điện phải trả: ") );
+const tienDien = +prompt("Nhập số tiền điện phải trả: ");
 let soDien;
  soDien = tienDien <= 90000
  ? tienDien / 1800
@@ -31,7 +31,8 @@ console.log("Số điện tiêu thụ là: " + soDien + " kWh.");
 
 // Bài 3
 
-const chucVu = prompt("Nhập chức vụ của bạn: (Manager/Senior/Staff/Intern)").toLowerCase();
+const chucVu = prompt("Nhập chức vụ của bạn: (Manager/Senior/Staff/Intern)")
+.toLowerCase();
 let heSo;
 heSo = chucVu === "manager"
 ? 3
@@ -43,7 +44,7 @@ heSo = chucVu === "manager"
 ? 1
 : 0;
 
-const ngayCongTT = Number(prompt("Nhập số ngày công: "));
+const ngayCongTT = +prompt("Nhập số ngày công: ");
 let ngayCongQD = 24;
 let luongCB = 5000000;
 ngayCongTT >= ngayCongQD
@@ -64,3 +65,20 @@ for (let i = 1; i <= 10; i++) {
 
   console.log("");
 }
+
+// Bài 5
+
+const n = +prompt("Nhập số nguyên dương n: ");
+
+let dieuKien = n >= 2;
+
+for (let i = 2; i < n; i++) {
+  if (n % i === 0) {
+    dieuKien = false;
+    break;
+  }
+}
+
+dieuKien
+  ? console.log(`${n} là số nguyên tố.`)
+  : console.log(`${n} không phải là số nguyên tố.`);
