@@ -32,14 +32,14 @@
 //     case 12:
 //         console.log("Tháng này thuộc quý 4")
 // }
-let sinhvien1 = [
-    {ten : "Hoàng", chuyenNganh: "Marketing"},
-    {ten : "Bách", chuyenNganh: "IT"},
-    {ten : "Quanh", chuyenNganh: "Ăn Xin"},
-    {ten : "Long", chuyenNganh: "Đánh giày"},
-    {ten : "Tuấn Anh", chuyenNganh: "Dọn vệ sinh"},
-    {ten : "Vũ", chuyenNganh: "Boss"}
-];
+// let sinhvien1 = [
+//     {ten : "Hoàng", chuyenNganh: "Marketing"},
+//     {ten : "Bách", chuyenNganh: "IT"},
+//     {ten : "Quanh", chuyenNganh: "Ăn Xin"},
+//     {ten : "Long", chuyenNganh: "Đánh giày"},
+//     {ten : "Tuấn Anh", chuyenNganh: "Dọn vệ sinh"},
+//     {ten : "Vũ", chuyenNganh: "Boss"}
+// ];
 // for(let {ten} of sinhvien1){
 //     console.log(ten);
 // }
@@ -47,6 +47,13 @@ let sinhvien1 = [
 // console.log(sinhvien1[0].ten);
 // const { ten , chuyenNganh} = sinhvien1[0];
 // console.log(ten,chuyenNganh);
-const arr = [0,1,2]
-const data = {name : "Iphone 18 Pro MAx 2T",  price : 80000000};
-console.log(data.name);
+// const arr = [0,1,2]
+// const data = {name : "Iphone 18 Pro MAx 2T",  privce : 80000000};
+// console.log(date);
+
+function greet (){
+    var a = 8;
+    console.log("Hello");
+}
+greet();
+console.log(a);
