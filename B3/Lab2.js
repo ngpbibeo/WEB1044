@@ -52,3 +52,15 @@ ngayCongTT >= ngayCongQD
 
 const luongThucLinh = heSo * ngayCongTT * (luongCB / ngayCongQD);
 console.log("Lương thực lĩnh: " + luongThucLinh.toLocaleString("vi-VN") + " VNĐ");
+
+// Bài 4
+
+for (let i = 1; i <= 10; i++) {
+  console.log(`Bảng cửu chương ${i}:`);
+
+  for (let j = 1; j <= 9; j++) {
+    console.log(`${i} x ${j} = ${i * j}`);
+  }
+
+  console.log("");
+}
