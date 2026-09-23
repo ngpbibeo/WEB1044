@@ -44,16 +44,16 @@
 //     console.log(ten);
 // }
 
-console.log(sinhvien1[0].ten);
-const { ten , chuyenNganh} = sinhvien1[0];
-console.log(ten,chuyenNganh);
-const arr = [0,1,2]
-const data = {name : "Iphone 18 Pro MAx 2T",  price : 80000000};
-console.log(data);
+// console.log(sinhvien1[0].ten);
+// const { ten , chuyenNganh} = sinhvien1[0];
+// console.log(ten,chuyenNganh);
+// const arr = [0,1,2]
+// const data = {name : "Iphone 18 Pro MAx 2T",  price : 80000000};
+// console.log(data);
 
-// function greet (){
-//     var a = 8;
-//     console.log("Hello");
-// }
-// greet();
-// console.log(a);
+function greet (){
+    var a = 8;
+    console.log("Hello");
+}
+greet();
+console.log(a);
