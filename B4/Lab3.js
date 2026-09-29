@@ -14,9 +14,9 @@ function tinhTienDien(kwh) {
         : 50 * 1800 + 50 * 2300 + (kwh - 100) * 3000;
   return tien;
 }
-console.log(tinhTienDien(50) + " VND");
-console.log(tinhTienDien(80) + " VND");
-console.log(tinhTienDien(120) + " VND");
+console.log(tinhTienDien(50).toLocaleString("vi-VN") + " VNĐ");
+console.log(tinhTienDien(80).toLocaleString("vi-VN") + " VNĐ");
+console.log(tinhTienDien(120).toLocaleString("vi-VN") + " VNĐ");
 
 function tinhSoKwh(tien) {
   let kwh =
@@ -52,3 +52,47 @@ function tinhLuong(chucVu, ngayCongTT) {
   return luongThucLinh;
 }
 console.log(tinhLuong("manager", 25).toLocaleString("vi-VN") + " VNĐ");
+
+// Bài 4
+
+function chuanHoaCau(chu) {
+  chu = chu.trim().replace(/\s+/g, " ");
+  chu = chu.toLowerCase();
+  chu = chu.replace(/(^|[.!?]\s*)(\S)/g, (match, dauCau, char) => {
+    return dauCau + char.toUpperCase();
+  });
+  chu = chu.replace(/\s+([!,.?])/g, "$1");
+  chu = chu.replace(/([.!?])(?=\S)/g, "$1 ");
+  return chu;
+}
+
+console.log(
+  chuanHoaCau(
+    "   xin chao   cac ban.    hom nay   troi dep qua   !toi   di hoc ve ? ",
+  ),
+);
+
+// Bài 5
+
+function mayTinhBang(a, b, phepToan) {
+  let kq;
+  switch (phepToan) {
+    case "+":
+      kq = a + b;
+      break;
+    case "-":
+      kq = a - b;
+      break;
+    case "*":
+      kq = a * b;
+      break;
+    case "/":
+      kq = a / b;
+      break;
+    default:
+      kq = "Phep toan khong hop le";
+      break;
+  }
+  return kq;
+}
+console.log(mayTinhBang(5, 3, "+"));
