@@ -27,41 +27,43 @@ let hour = 0;
 let interval;
 
 const startTimer = () => {
-  interval = setInterval(() => {
-    if (second == 60) {
-      second = 0;
-      minute++;
-    }
+  if (!interval) {
+    interval = setInterval(() => {
+      if (second == 60) {
+        second = 0;
+        minute++;
+      }
 
-    if (minute == 60) {
-      minute = 0;
-      hour++;
-    }
+      if (minute == 60) {
+        minute = 0;
+        hour++;
+      }
 
-    if (hour == 24) {
-      hour = 0;
-    }
+      if (hour == 24) {
+        hour = 0;
+      }
 
-    if (hour <= 9) {
-      document.getElementById("timerHour").innerHTML = "0" + hour;
-    } else {
-      document.getElementById("timerHour").innerHTML = hour;
-    }
+      if (hour <= 9) {
+        document.getElementById("timerHour").innerHTML = "0" + hour;
+      } else {
+        document.getElementById("timerHour").innerHTML = hour;
+      }
 
-    if (minute <= 9) {
-      document.getElementById("timerMinute").innerHTML = "0" + minute;
-    } else {
-      document.getElementById("timerMinute").innerHTML = minute;
-    }
+      if (minute <= 9) {
+        document.getElementById("timerMinute").innerHTML = "0" + minute;
+      } else {
+        document.getElementById("timerMinute").innerHTML = minute;
+      }
 
-    if (second <= 9) {
-      document.getElementById("timerSecond").innerHTML = "0" + second;
-    } else {
-      document.getElementById("timerSecond").innerHTML = second;
-    }
+      if (second <= 9) {
+        document.getElementById("timerSecond").innerHTML = "0" + second;
+      } else {
+        document.getElementById("timerSecond").innerHTML = second;
+      }
 
-    second++;
-  }, 1);
+      second++;
+    }, 1);
+  }
 };
 
 document.getElementById("start").addEventListener("click", startTimer);
