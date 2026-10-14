@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .background {
+        background-color: red;
+      }
+      .bigText {
+        font-size: 200px;
+      }
+      .slider {
+        width: 1300px;
+        height: 600px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="../images/soopi.webp" alt="" id="slider" />
+    <button id="btn1" onclick="nextImage()">Next</button>
+    <button id="btn3" onclick="prevImage()">Previous</button>
+    <button id="btn2" onclick="start()">Start</button>
+    <button id="btn4" onclick="stop()">Stop</button>
+    <div id="div1">Text 1</div>
+    <div id="div2">Text 2</div>
+    <script src="./lesson12.js"></script>
+  </body>
+</html>
