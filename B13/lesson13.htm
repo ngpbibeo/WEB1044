@@ -15,7 +15,15 @@
       <div style="color: red" id="errSDT"></div>
       Email : <input type="text" id="email" /> <br />
       <div style="color: red" id="errEmail"></div>
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Submit" /> <br />
+      Loại hàng:
+      <select id="loaiHang" oninput="tinhTien()">
+        <option value="80000000">Iphone 18 proMax 2TB</option>
+        <option value="100000000">Iphone 18 Duo 2TB</option></select
+      ><br />
+      Giá sản phẩm: <input type="text" disabled id="giaSP" /> <br />
+      Số lượng: <input type="number" id="soLuong" oninput="tinhTien()" /><br />
+      Thành tiền: <input type="text" id="thanhTien" /><br />
     </form>
     <script src="./lesson13.js"></script>
   </body>

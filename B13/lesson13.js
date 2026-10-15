@@ -9,7 +9,11 @@ function validateForm(event) {
   } else {
     document.getElementById("errHoTen").innerText = "";
   }
-  if (!(email.includes(".") && email.includes("@"))) {
+  if (email.trim() == "") {
+    document.getElementById("errEmail").innerText =
+      "Bạn không được để trống Email";
+    return false;
+  } else if (!(email.includes(".") && email.includes("@"))) {
     document.getElementById("errEmail").innerText =
       "Email không đúng dịnh dạng";
     return false;
@@ -22,4 +26,12 @@ function validateForm(event) {
   } else {
     document.getElementById("errSDT").innerText = "";
   }
+}
+
+function tinhTien() {
+  const giaSP = (document.getElementById("giaSP").value =
+    document.getElementById("loaiHang").value);
+  document.getElementById("thanhTien").value =
+    document.getElementById("loaiHang").value *
+    document.getElementById("soLuong").value;
 }
