@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThiThu</title>
+  </head>
+  <style>
+    #slider {
+      width: 1000px;
+      height: 450px;
+      object-fit: cover;
+    }
+    #title {
+      text-align: center;
+      font-size: 50px;
+    }
+  </style>
+  <body>
+    <h1 id="title">Thi Thu</h1>
+    <div>
+      <span><button id="prevBtn" onclick="prevImage()">Prev</button></span>
+      <span><button id="playBtn" onclick="playSlideshow()">Play</button></span>
+      <span><img src="../images/soopi.webp" id="slider" /></span>
+      <span><button id="nextBtn" onclick="nextImage()">Next</button></span>
+      <span><button id="stopBtn" onclick="stopSlideshow()">Stop</button></span>
+    </div>
+    <script src="./thithu.js"></script>
+  </body>
+</html>
