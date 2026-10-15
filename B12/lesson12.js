@@ -42,6 +42,7 @@ function prevImage() {
 }
 
 function start() {
+  stop();
   interval = setInterval(nextImage, 500);
 }
 
