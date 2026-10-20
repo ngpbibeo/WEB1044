@@ -5,24 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
   <body>
     <form action="" onsubmit="return validateForm(event);">
-      <h1><b>FORM MUA HÀNG</b></h1>
+      <h1>Form mua hàng</h1>
       <br />
-      Họ tên : <input type="text" id="hoTen" /> <br />
+      Họ tên : <input type="text" id="hoTen" /><br />
       <div style="color: red" id="errHoTen"></div>
-      SDT : <input type="text" id="soDT" /> <br />
-      <div style="color: red" id="errSDT"></div>
-      Email : <input type="text" id="email" /> <br />
+      SDT : <input type="text" id="soDT" /><br />
+      <div style="color: red" id="errSoDT"></div>
+      Email : <input type="text" id="email" /><br />
       <div style="color: red" id="errEmail"></div>
-      <input type="submit" value="Submit" /> <br />
+      <input type="submit" value="Submit" /><br />
       Loại hàng:
       <select id="loaiHang" oninput="tinhTien()">
         <option value="80000000">Iphone 18 proMax 2TB</option>
-        <option value="100000000">Iphone 18 Duo 2TB</option></select
-      ><br />
-      Giá sản phẩm: <input type="text" disabled id="giaSP" /> <br />
-      Số lượng: <input type="number" id="soLuong" oninput="tinhTien()" /><br />
+        <option value="100000000">Iphone 18 duo 2TB</option>
+      </select>
+      <br />
+      Giá sản phẩm: <input type="text" disabled id="giaSP" /><br />
+      Số lượng: <input type="number" id="soLuong" oninput="tinhTien()" />
+      <br />
+      Địa điểm giao hàng:
+      <input
+        type="radio"
+        value="0"
+        name="ship"
+        class="ship"
+        oninput="tinhTien()"
+      />Nội thành
+      <input
+        type="radio"
+        value="100000"
+        name="ship"
+        oninput="tinhTien()"
+        class="ship"
+      />Ngoại thành
+      <input
+        type="radio"
+        value="500000"
+        name="ship"
+        class="ship"
+        oninput="tinhTien()"
+      />Quốc tế <br />
+      Phụ kiện:
+      <input
+        type="checkbox"
+        value="1000000"
+        name="phuKien"
+        class="phuKien"
+        oninput="tinhTien()"
+      />Tai nghe
+      <input
+        type="checkbox"
+        value="2000000"
+        name="phuKien"
+        class="phuKien"
+        oninput="tinhTien()"
+      />Cáp sạc
+      <input
+        type="checkbox"
+        value="3000000"
+        name="phuKien"
+        class="phuKien"
+        oninput="tinhTien()"
+      />Ốp lưng
+      <br />
+      Phí ship:<input type="text" id="phiShip" disabled /><br />
       Thành tiền: <input type="text" id="thanhTien" /><br />
     </form>
     <script src="./lesson13.js"></script>
